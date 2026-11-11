@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elian Salvador · Marketing × Ciberseguridad</title>
+  <meta name="description" content="Portfolio de Elian Salvador: técnico superior en Marketing y Publicidad y estudiante de ASIX con perfil de ciberseguridad. Barcelona.">
+  <meta name="theme-color" content="#05070d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elian Salvador · Marketing × Ciberseguridad">
+  <meta property="og:description" content="Marketing y Publicidad + ASIX con perfil de ciberseguridad. Experiencia, áreas del curso y proyectos.">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Orden importante: primero los datos, luego el pintado, luego los efectos -->
+  <script src="data/data.js" defer></script>
+  <script src="assets/js/render.js" defer></script>
+  <script src="assets/js/effects.js" defer></script>
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand mono" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span id="brand-name">elian.salvador</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav" aria-label="Principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#curso">Curso</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto" class="nav-cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 00 · PORTADA -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow mono"><span class="pulse" aria-hidden="true"></span><span id="hero-status"></span></p>
+          <h1 class="hero-name" id="hero-name"></h1>
+          <p class="hero-role" id="hero-role"></p>
+          <p class="hero-tagline" id="hero-tagline"></p>
+          <div class="hero-cta" id="hero-cta"></div>
+        </div>
+
+        <div class="terminal" role="img" aria-label="Terminal con una breve presentación">
+          <div class="terminal-bar">
+            <i></i><i></i><i></i>
+            <span class="mono">elian@portfolio:~</span>
+          </div>
+          <div class="terminal-body mono" id="terminal-body"></div>
+        </div>
+      </div>
+      <a class="scroll-hint mono" href="#sobre-mi" aria-label="Bajar a Sobre mí">scroll ↓</a>
+    </section>
+
+    <!-- 01 · SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index mono">01 / sobre mí</span>
+          <h2>Dos mundos, un perfil.</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-text reveal" id="about-text"></div>
+          <dl class="facts card reveal" id="about-facts"></dl>
+        </div>
+        <div class="dual-grid" id="about-dual"></div>
+        <div class="bridge card reveal" id="about-bridge"></div>
+
+        <header class="section-head sub reveal">
+          <span class="section-index mono">02 / aspiraciones</span>
+          <h3>Hacia dónde voy.</h3>
+        </header>
+        <div class="aspirations" id="aspirations"></div>
+      </div>
+    </section>
+
+    <!-- 03 · EXPERIENCIA Y FORMACIÓN -->
+    <section id="experiencia" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index mono">03 / experiencia</span>
+          <h2>Dónde he trabajado y estudiado.</h2>
+        </header>
+        <div class="two-col">
+          <div>
+            <h3 class="col-title mono reveal">Experiencia laboral</h3>
+            <div class="timeline" id="experience"></div>
+          </div>
+          <div>
+            <h3 class="col-title mono reveal">Formación</h3>
+            <div class="timeline" id="education"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · ÁREAS DEL CURSO -->
+    <section id="curso" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index mono">04 / curso</span>
+          <h2>Lo que he tocado en ASIX.</h2>
+          <p class="section-lead">Áreas trabajadas en el ciclo, con las herramientas que he usado en cada una.</p>
+        </header>
+        <div class="filters reveal" id="area-filters" role="group" aria-label="Filtrar por categoría"></div>
+        <div class="areas-grid" id="areas"></div>
+      </div>
+    </section>
+
+    <!-- 05 · PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index mono">05 / proyectos</span>
+          <h2>Cosas que he construido.</h2>
+        </header>
+        <div class="projects-grid" id="projects"></div>
+      </div>
+    </section>
+
+    <!-- 06 · CONTACTO -->
+    <section id="contacto" class="section contact">
+      <div class="container">
+        <div class="contact-box card reveal">
+          <span class="section-index mono">06 / contacto</span>
+          <h2 id="contact-title"></h2>
+          <p id="contact-text"></p>
+          <div class="hero-cta" id="contact-cta"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner mono">
+      <span>© <span id="year"></span> Elian Salvador</span>
+      <a href="#top">volver arriba ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
